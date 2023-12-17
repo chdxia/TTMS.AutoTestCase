@@ -7,7 +7,13 @@
         },
         "browsers": "chrome, ie 11"
     },
-    "vars": {},
+    "vars": {
+        "companyName": "",
+        "price": "",
+        "quantity": 2,
+        "amount": "",
+        "templateName": ""
+    },
     "reporter": {
         "distDir": ""
     },

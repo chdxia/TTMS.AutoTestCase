@@ -1,7 +1,7 @@
 {
-  "name": "uirecorderTest",
+  "name": "TTMS.AutoTestCase",
   "version": "1.0.0",
-  "description": "",
+  "description": "基于uirecorder的UI自动化测试持续集成方案",
   "main": "",
   "dependencies": {
     "chai": "3.5.0",
@@ -16,12 +16,14 @@
   "devDependencies": {
   },
   "scripts": {
+    "start": "uirecorder start",
     "installdriver": "selenium-standalone install --drivers.firefox.baseURL=http://npm.taobao.org/mirrors/geckodriver --baseURL=http://npm.taobao.org/mirrors/selenium --drivers.chrome.baseURL=http://npm.taobao.org/mirrors/chromedriver --drivers.ie.baseURL=http://npm.taobao.org/mirrors/selenium",
     "server": "selenium-standalone start",
-    "test": "mocha \"!(node_modules)/**/*.spec.js\" --reporter macaca-reporter --reporter-options reportJSONFilename=index,processAlwaysExitWithZero=true --bail",
+    "test": "mocha \"./sample/**/*.js\" --reporter macaca-reporter --reporter-options reportJSONFilename=index,processAlwaysExitWithZero=true --bail",
     "singletest": "mocha --reporter macaca-reporter --reporter-options reportJSONFilename=index,processAlwaysExitWithZero=true --bail",
-    "paralleltest": "macaca-mocha-parallel-tests \"!(node_modules)/**/*.spec.js\" --reporter macaca-reporter --reporter-options reportJSONFilename=index,processAlwaysExitWithZero=true --max-parallel 5 --bail",
+    "paralleltest": "macaca-mocha-parallel-tests \"./cases/**/*.js\" --reporter macaca-reporter --reporter-options reportJSONFilename=index,processAlwaysExitWithZero=true --max-parallel 5 --bail",
     "moduletest": "macaca-mocha-parallel-tests --reporter macaca-reporter --reporter-options reportJSONFilename=index,processAlwaysExitWithZero=true --max-parallel 5 --bail"
   },
-  "author": ""
+  "author": "chdxia<chdxiamail@gmail.com>",
+  "license": "MIT"
 }
