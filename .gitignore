@@ -1,12 +1,5 @@
-.DS_Store
-.idea
-node_modules
-npm-debug.log
-uirecorder.log
-reports
-screenshots/**/*.png
-screenshots/**/*.html
-screenshots/**/*.json
-
-.vs
-sample/**/*.js
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
