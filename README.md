@@ -1,2 +1,3 @@
 # TTMS.AutoTestCase
-UI automation test cases by uirecorder
+
+基于uirecorder的UI自动化测试持续集成方案
